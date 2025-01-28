@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Prescription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Delete Prescription</h2>
+        <form id="deletePrescriptionForm">
+            <label for="patientId">Patient ID:</label>
+            <input type="text" id="patientId" required>
+
+            <label for="doctorId">Doctor ID:</label>
+            <input type="text" id="doctorId" required>
+
+            <button type="submit">Delete Prescription</button>
+        </form>
+
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        document.getElementById("deletePrescriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let patientId = document.getElementById("patientId").value;
+            let doctorId = document.getElementById("doctorId").value;
+
+            fetch("/delete_prescription", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    patient_id: patientId,
+                    doctor_id: doctorId
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("responseMessage").textContent = data.message;
+                document.getElementById("responseMessage").style.color = data.status === "success" ? "green" : "red";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("responseMessage").textContent = "An error occurred.";
+                document.getElementById("responseMessage").style.color = "red";
+            });
+        });
+    </script>
+
+</body>
+</html>

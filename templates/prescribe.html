@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescribe Medication</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Prescribe Medication</h2>
+        <form id="prescriptionForm">
+            <label for="patientId">Patient ID:</label>
+            <input type="text" id="patientId" required>
+
+            <label for="doctorId">Doctor ID:</label>
+            <input type="text" id="doctorId" required>
+
+            <label for="medication">Medication:</label>
+            <input type="text" id="medication" required>
+
+            <label for="dose">Dosage:</label>
+            <input type="text" id="dose" required>
+
+            <label for="prescriptionDate">Date & Time:</label>
+            <input type="text" id="prescriptionDate" readonly>
+
+            <button type="submit">Prescribe</button>
+        </form>
+
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        // Auto-fill the date field
+        document.getElementById("prescriptionDate").value = new Date().toISOString().slice(0, 19).replace("T", " ");
+
+        document.getElementById("prescriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let patientId = document.getElementById("patientId").value;
+            let doctorId = document.getElementById("doctorId").value;
+            let medication = document.getElementById("medication").value;
+            let dose = document.getElementById("dose").value;
+            let prescriptionDate = document.getElementById("prescriptionDate").value;
+
+            fetch("/add_prescription", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    patient_id: patientId,
+                    doctor_id: doctorId,
+                    medication: medication,
+                    dose: dose,
+                    date: prescriptionDate
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("responseMessage").textContent = data.message;
+                document.getElementById("responseMessage").style.color = data.status === "success" ? "green" : "red";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("responseMessage").textContent = "An error occurred.";
+                document.getElementById("responseMessage").style.color = "red";
+            });
+        });
+    </script>
+
+</body>
+</html>

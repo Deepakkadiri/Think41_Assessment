@@ -1,0 +1,202 @@
+[
+    {
+        "_id": "P1001",
+        "name": "John Doe",
+        "age": 45,
+        "gender": "Male",
+        "contact": "123-456-7890",
+        "address": "123 Main St, Springfield",
+        "medical_history": ["Diabetes", "Hypertension"],
+        "assigned_doctor": "D2001"
+    },
+    {
+        "_id": "P1002",
+        "name": "Jane Smith",
+        "age": 37,
+        "gender": "Female",
+        "contact": "987-654-3210",
+        "address": "456 Oak St, Springfield",
+        "medical_history": ["Asthma"],
+        "assigned_doctor": "D2002"
+    },
+    {
+        "_id": "P1003",
+        "name": "Alice Johnson",
+        "age": 29,
+        "gender": "Female",
+        "contact": "555-666-7777",
+        "address": "789 Pine St, Springfield",
+        "medical_history": ["None"],
+        "assigned_doctor": "D2003"
+    },
+    {
+        "_id": "P1004",
+        "name": "Robert Brown",
+        "age": 52,
+        "gender": "Male",
+        "contact": "222-333-4444",
+        "address": "101 Maple St, Springfield",
+        "medical_history": ["Heart Disease"],
+        "assigned_doctor": "D2001"
+    },
+    {
+        "_id": "P1005",
+        "name": "Emily Davis",
+        "age": 41,
+        "gender": "Female",
+        "contact": "666-777-8888",
+        "address": "202 Elm St, Springfield",
+        "medical_history": ["Arthritis"],
+        "assigned_doctor": "D2004"
+    },
+    {
+        "_id": "P1006",
+        "name": "Michael Wilson",
+        "age": 36,
+        "gender": "Male",
+        "contact": "333-444-5555",
+        "address": "303 Cedar St, Springfield",
+        "medical_history": ["Hypertension"],
+        "assigned_doctor": "D2003"
+    },
+    {
+        "_id": "P1007",
+        "name": "Sophia Martinez",
+        "age": 25,
+        "gender": "Female",
+        "contact": "777-888-9999",
+        "address": "404 Birch St, Springfield",
+        "medical_history": ["Migraine"],
+        "assigned_doctor": "D2005"
+    },
+    {
+        "_id": "P1008",
+        "name": "James Anderson",
+        "age": 60,
+        "gender": "Male",
+        "contact": "123-789-4560",
+        "address": "505 Walnut St, Springfield",
+        "medical_history": ["Diabetes", "Heart Disease"],
+        "assigned_doctor": "D2001"
+    },
+    {
+        "_id": "P1009",
+        "name": "Olivia Thomas",
+        "age": 32,
+        "gender": "Female",
+        "contact": "444-555-6666",
+        "address": "606 Cherry St, Springfield",
+        "medical_history": ["Asthma", "Allergy"],
+        "assigned_doctor": "D2006"
+    },
+    {
+        "_id": "P1010",
+        "name": "William Lee",
+        "age": 47,
+        "gender": "Male",
+        "contact": "111-222-3333",
+        "address": "707 Ash St, Springfield",
+        "medical_history": ["Obesity"],
+        "assigned_doctor": "D2002"
+    },
+    {
+        "_id": "P1011",
+        "name": "Ethan Walker",
+        "age": 39,
+        "gender": "Male",
+        "contact": "666-999-8888",
+        "address": "808 Palm St, Springfield",
+        "medical_history": ["Back Pain"],
+        "assigned_doctor": "D2007"
+    },
+    {
+        "_id": "P1012",
+        "name": "Ava Hernandez",
+        "age": 27,
+        "gender": "Female",
+        "contact": "555-222-1111",
+        "address": "909 Oakwood St, Springfield",
+        "medical_history": ["Anemia"],
+        "assigned_doctor": "D2004"
+    },
+    {
+        "_id": "P1013",
+        "name": "Mason Carter",
+        "age": 54,
+        "gender": "Male",
+        "contact": "888-777-6666",
+        "address": "111 Pinewood St, Springfield",
+        "medical_history": ["High Cholesterol"],
+        "assigned_doctor": "D2003"
+    },
+    {
+        "_id": "P1014",
+        "name": "Isabella King",
+        "age": 30,
+        "gender": "Female",
+        "contact": "333-222-5555",
+        "address": "222 Redwood St, Springfield",
+        "medical_history": ["Thyroid Disorder"],
+        "assigned_doctor": "D2008"
+    },
+    {
+        "_id": "P1015",
+        "name": "Liam Scott",
+        "age": 50,
+        "gender": "Male",
+        "contact": "999-888-7777",
+        "address": "333 Sycamore St, Springfield",
+        "medical_history": ["Diabetes"],
+        "assigned_doctor": "D2005"
+    },
+    {
+        "_id": "P1016",
+        "name": "Mia Nelson",
+        "age": 22,
+        "gender": "Female",
+        "contact": "777-555-4444",
+        "address": "444 Magnolia St, Springfield",
+        "medical_history": ["None"],
+        "assigned_doctor": "D2006"
+    },
+    {
+        "_id": "P1017",
+        "name": "Noah Perez",
+        "age": 42,
+        "gender": "Male",
+        "contact": "222-999-5555",
+        "address": "555 Juniper St, Springfield",
+        "medical_history": ["Depression"],
+        "assigned_doctor": "D2002"
+    },
+    {
+        "_id": "P1018",
+        "name": "Charlotte Adams",
+        "age": 35,
+        "gender": "Female",
+        "contact": "444-333-2222",
+        "address": "666 Laurel St, Springfield",
+        "medical_history": ["PCOS"],
+        "assigned_doctor": "D2004"
+    },
+    {
+        "_id": "P1019",
+        "name": "Benjamin Roberts",
+        "age": 48,
+        "gender": "Male",
+        "contact": "111-000-9999",
+        "address": "777 Dogwood St, Springfield",
+        "medical_history": ["Hypertension", "Diabetes"],
+        "assigned_doctor": "D2001"
+    },
+    {
+        "_id": "P1020",
+        "name": "Amelia Clark",
+        "age": 31,
+        "gender": "Female",
+        "contact": "999-777-2222",
+        "address": "888 Maplewood St, Springfield",
+        "medical_history": ["Migraine", "Anemia"],
+        "assigned_doctor": "D2007"
+    }
+]

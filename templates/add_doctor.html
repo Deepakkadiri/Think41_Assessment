@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Doctor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Add Doctor</h2>
+
+        <!-- Form to add doctor -->
+        <form id="addDoctorForm">
+            <label for="doctor_id">Doctor ID:</label>
+            <input type="text" id="doctor_id" name="doctor_id" placeholder="Enter Doctor ID" required><br><br>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required><br><br>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" placeholder="Enter Specialization" required><br><br>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter Contact" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter Address"><br><br>
+
+            <label for="experience">Experience (Years):</label>
+            <input type="number" id="experience" name="experience" placeholder="Enter Experience"><br><br>
+
+            <button type="submit">Add Doctor</button>
+        </form>
+
+        <div id="responseMessage" style="margin-top: 20px;"></div>
+
+        <h3>Existing Doctors</h3>
+        <table id="doctorTable" border="1">
+            <tr>
+                <th>Doctor ID</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Experience</th>
+            </tr>
+            <!-- Dynamic rows will be added here -->
+        </table>
+    </div>
+
+    <script>
+        // Fetch and display doctors from the database when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchDoctors();
+        });
+
+        // Function to fetch and display doctors
+        function fetchDoctors() {
+            fetch("/get_doctors")  // Endpoint to get doctors' data
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById("doctorTable");
+                    data.forEach(doctor => {
+                        const row = table.insertRow();
+                        row.insertCell(0).textContent = doctor.doctor_id;
+                        row.insertCell(1).textContent = doctor.name;
+                        row.insertCell(2).textContent = doctor.specialization;
+                        row.insertCell(3).textContent = doctor.contact;
+                        row.insertCell(4).textContent = doctor.address;
+                        row.insertCell(5).textContent = doctor.experience;
+                    });
+                });
+        }
+
+        // Handle form submission for adding a new doctor
+        document.getElementById('addDoctorForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch("/add_doctor", {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById("responseMessage");
+
+                if (data.status === 'success') {
+                    messageDiv.innerHTML = `<span style="color: green;">${data.message}</span>`;
+                    fetchDoctors();  // Refresh the doctor table
+                } else {
+                    messageDiv.innerHTML = `<span style="color: red;">${data.message}</span>`;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-container {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital Management System</h1>
+        <button onclick="location.href='/prescribe'">Prescribe Medication</button>
+        <button onclick="location.href='/update_prescription_form'">Update Prescription</button>
+        <button onclick="location.href='/delete_prescription_form'">Delete Prescription</button>
+        <div class="input-container">
+            <input type="text" id="patientId" placeholder="Enter Patient ID">
+        </div>
+        <button onclick="getPatientDetails()">Get Patient Details</button>
+    </div>
+    
+    <script>
+        function getPatientDetails() {
+            var patientId = document.getElementById("patientId").value;
+            if (patientId) {
+                window.location.href = "/patients/" + patientId;
+            } else {
+                alert("Please enter a Patient ID");
+            }
+        }
+    </script>
+</body>
+</html>

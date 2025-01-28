@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Prescription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Update Prescription</h2>
+        <form id="updatePrescriptionForm">
+            <label for="patientId">Patient ID:</label>
+            <input type="text" id="patientId" name="patient_id" required>
+
+            <label for="doctorId">Doctor ID:</label>
+            <input type="text" id="doctorId" name="doctor_id" required>
+
+            <label for="medication">New Medication:</label>
+            <input type="text" id="medication" name="medication" required>
+
+            <label for="dose">New Dosage:</label>
+            <input type="text" id="dose" name="dose" required>
+
+            <label for="date">Updated Prescription Date:</label>
+            <input type="text" id="date" name="date" readonly>
+
+            <button type="submit">Update Prescription</button>
+        </form>
+
+        <p id="statusMessage"></p>
+    </div>
+
+    <script>
+        // Automatically set current date-time
+        document.addEventListener("DOMContentLoaded", function() {
+            let now = new Date();
+            let formattedDate = now.getFullYear() + "-" +
+                String(now.getMonth() + 1).padStart(2, '0') + "-" +
+                String(now.getDate()).padStart(2, '0') + " " +
+                String(now.getHours()).padStart(2, '0') + ":" +
+                String(now.getMinutes()).padStart(2, '0') + ":" +
+                String(now.getSeconds()).padStart(2, '0');
+
+            document.getElementById("date").value = formattedDate;
+        });
+
+        // Handle form submission
+        document.getElementById("updatePrescriptionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let formData = {
+                doctor_id: document.getElementById("doctorId").value,
+                medication: document.getElementById("medication").value,
+                dose: document.getElementById("dose").value,
+                date: document.getElementById("date").value
+            };
+
+            let patientId = document.getElementById("patientId").value;
+
+            fetch(`/update_prescription/${patientId}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("statusMessage").textContent = data.message;
+                document.getElementById("statusMessage").style.color = data.status === "success" ? "green" : "red";
+            })
+            .catch(error => {
+                document.getElementById("statusMessage").textContent = "Error updating prescription.";
+                document.getElementById("statusMessage").style.color = "red";
+            });
+        });
+    </script>
+
+</body>
+</html>

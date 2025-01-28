@@ -1,0 +1,101 @@
+2025-01-28 13:23:12,249 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 13:23:12,249 - [33mPress CTRL+C to quit[0m
+2025-01-28 13:23:12,258 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:23:12,643 -  * Debugger is active!
+2025-01-28 13:23:12,645 -  * Debugger PIN: 399-081-612
+2025-01-28 13:23:19,158 - 127.0.0.1 - - [28/Jan/2025 13:23:19] "GET /prescribe HTTP/1.1" 200 -
+2025-01-28 13:23:19,181 - 127.0.0.1 - - [28/Jan/2025 13:23:19] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:23:28,764 - 127.0.0.1 - - [28/Jan/2025 13:23:28] "[35m[1mPOST /prescribe HTTP/1.1[0m" 500 -
+2025-01-28 13:25:13,658 - 127.0.0.1 - - [28/Jan/2025 13:25:13] "GET /prescribe HTTP/1.1" 200 -
+2025-01-28 13:25:13,690 - 127.0.0.1 - - [28/Jan/2025 13:25:13] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:25:21,445 - Prescription for Patient P1010 by Doctor D2002 Medications: Paracetmol Status: Success
+2025-01-28 13:25:21,446 - 127.0.0.1 - - [28/Jan/2025 13:25:21] "[35m[1mPOST /prescribe HTTP/1.1[0m" 201 -
+2025-01-28 13:28:33,662 -  * Detected change in 'C:\\Users\\kadir\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\pymongo\\collation.py', reloading
+2025-01-28 13:28:34,696 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:28:35,084 -  * Debugger is active!
+2025-01-28 13:28:35,086 -  * Debugger PIN: 399-081-612
+2025-01-28 13:28:35,952 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:28:35,952 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:28:35,952 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:28:36,643 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:28:37,088 -  * Debugger is active!
+2025-01-28 13:28:37,091 -  * Debugger PIN: 399-081-612
+2025-01-28 13:29:38,738 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 13:29:38,738 - [33mPress CTRL+C to quit[0m
+2025-01-28 13:29:38,744 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:29:39,096 -  * Debugger is active!
+2025-01-28 13:29:39,098 -  * Debugger PIN: 399-081-612
+2025-01-28 13:30:11,631 - 127.0.0.1 - - [28/Jan/2025 13:30:11] "[31m[1mGET /update_prescription/P1010 HTTP/1.1[0m" 405 -
+2025-01-28 13:32:26,254 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:26,254 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:26,254 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:26,703 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:26,704 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:26,704 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:32:27,430 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:32:27,908 -  * Debugger is active!
+2025-01-28 13:32:27,910 -  * Debugger PIN: 399-081-612
+2025-01-28 13:33:23,374 - 127.0.0.1 - - [28/Jan/2025 13:33:23] "[31m[1mGET /update_prescription/P1010 HTTP/1.1[0m" 405 -
+2025-01-28 13:33:23,970 - 127.0.0.1 - - [28/Jan/2025 13:33:23] "[31m[1mGET /update_prescription/P1010 HTTP/1.1[0m" 405 -
+2025-01-28 13:33:24,199 - 127.0.0.1 - - [28/Jan/2025 13:33:24] "[31m[1mGET /update_prescription/P1010 HTTP/1.1[0m" 405 -
+2025-01-28 13:33:29,326 - 127.0.0.1 - - [28/Jan/2025 13:33:29] "[33mGET /update_prescription HTTP/1.1[0m" 404 -
+2025-01-28 13:33:34,863 - 127.0.0.1 - - [28/Jan/2025 13:33:34] "[31m[1mGET /update_prescription/P1010 HTTP/1.1[0m" 405 -
+2025-01-28 13:33:39,760 - 127.0.0.1 - - [28/Jan/2025 13:33:39] "[31m[1mGET /update_prescription/P1001 HTTP/1.1[0m" 405 -
+2025-01-28 13:34:49,323 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:34:49,324 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:34:49,324 -  * Detected change in 'c:\\Users\\kadir\\Desktop\\Think41\\app.py', reloading
+2025-01-28 13:34:50,061 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:34:50,559 -  * Debugger is active!
+2025-01-28 13:34:50,562 -  * Debugger PIN: 399-081-612
+2025-01-28 13:35:34,418 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 13:35:34,418 - [33mPress CTRL+C to quit[0m
+2025-01-28 13:35:34,427 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:35:34,844 -  * Debugger is active!
+2025-01-28 13:35:34,847 -  * Debugger PIN: 399-081-612
+2025-01-28 13:35:58,119 - 127.0.0.1 - - [28/Jan/2025 13:35:58] "GET /update_prescription_form HTTP/1.1" 200 -
+2025-01-28 13:35:58,140 - 127.0.0.1 - - [28/Jan/2025 13:35:58] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:36:31,997 - 127.0.0.1 - - [28/Jan/2025 13:36:31] "PUT /update_prescription HTTP/1.1" 200 -
+2025-01-28 13:37:20,535 - 127.0.0.1 - - [28/Jan/2025 13:37:20] "GET /update_prescription_form HTTP/1.1" 200 -
+2025-01-28 13:37:20,557 - 127.0.0.1 - - [28/Jan/2025 13:37:20] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:37:55,064 -  * Detected change in 'C:\\Users\\kadir\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages\\flask\\app.py', reloading
+2025-01-28 13:37:55,077 - 127.0.0.1 - - [28/Jan/2025 13:37:55] "[35m[1mPUT /update_prescription HTTP/1.1[0m" 500 -
+2025-01-28 13:37:55,902 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:37:56,289 -  * Debugger is active!
+2025-01-28 13:37:56,291 -  * Debugger PIN: 399-081-612
+2025-01-28 13:38:20,190 - 127.0.0.1 - - [28/Jan/2025 13:38:20] "PUT /update_prescription HTTP/1.1" 200 -
+2025-01-28 13:43:18,822 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 13:43:18,822 - [33mPress CTRL+C to quit[0m
+2025-01-28 13:43:18,829 -  * Restarting with watchdog (windowsapi)
+2025-01-28 13:43:19,242 -  * Debugger is active!
+2025-01-28 13:43:19,244 -  * Debugger PIN: 399-081-612
+2025-01-28 13:43:32,301 - 127.0.0.1 - - [28/Jan/2025 13:43:32] "[33mGET /delete_prescribe HTTP/1.1[0m" 404 -
+2025-01-28 13:43:48,053 - 127.0.0.1 - - [28/Jan/2025 13:43:48] "GET /delete_prescription_form HTTP/1.1" 200 -
+2025-01-28 13:43:48,067 - 127.0.0.1 - - [28/Jan/2025 13:43:48] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:44:09,552 - 127.0.0.1 - - [28/Jan/2025 13:44:09] "DELETE /delete_prescription HTTP/1.1" 200 -
+2025-01-28 13:46:04,981 - 127.0.0.1 - - [28/Jan/2025 13:46:04] "GET /delete_prescription_form HTTP/1.1" 200 -
+2025-01-28 13:46:05,004 - 127.0.0.1 - - [28/Jan/2025 13:46:05] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 13:46:40,321 - 127.0.0.1 - - [28/Jan/2025 13:46:40] "[31m[1mDELETE /delete_prescription HTTP/1.1[0m" 403 -
+2025-01-28 13:47:01,892 - 127.0.0.1 - - [28/Jan/2025 13:47:01] "DELETE /delete_prescription HTTP/1.1" 200 -
+2025-01-28 16:03:12,160 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 16:03:12,160 - [33mPress CTRL+C to quit[0m
+2025-01-28 16:03:12,176 -  * Restarting with watchdog (windowsapi)
+2025-01-28 16:03:12,641 -  * Debugger is active!
+2025-01-28 16:03:12,643 -  * Debugger PIN: 399-081-612
+2025-01-28 16:03:21,632 - 127.0.0.1 - - [28/Jan/2025 16:03:21] "GET / HTTP/1.1" 200 -
+2025-01-28 16:03:21,890 - 127.0.0.1 - - [28/Jan/2025 16:03:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-28 16:03:23,599 - 127.0.0.1 - - [28/Jan/2025 16:03:23] "GET /prescribe HTTP/1.1" 200 -
+2025-01-28 16:03:23,939 - 127.0.0.1 - - [28/Jan/2025 16:03:23] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 16:03:27,244 - 127.0.0.1 - - [28/Jan/2025 16:03:27] "GET /update_prescription_form HTTP/1.1" 200 -
+2025-01-28 16:03:27,582 - 127.0.0.1 - - [28/Jan/2025 16:03:27] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 16:03:31,002 - 127.0.0.1 - - [28/Jan/2025 16:03:31] "GET /delete_prescription_form HTTP/1.1" 200 -
+2025-01-28 16:03:31,338 - 127.0.0.1 - - [28/Jan/2025 16:03:31] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-01-28 16:03:34,389 - 127.0.0.1 - - [28/Jan/2025 16:03:34] "[33mGET /patients/1 HTTP/1.1[0m" 404 -
+2025-01-28 16:04:49,318 - 127.0.0.1 - - [28/Jan/2025 16:04:49] "GET / HTTP/1.1" 200 -
+2025-01-28 16:06:06,266 - 127.0.0.1 - - [28/Jan/2025 16:06:06] "GET / HTTP/1.1" 200 -
+2025-01-28 16:06:17,491 - 127.0.0.1 - - [28/Jan/2025 16:06:17] "GET /prescribe HTTP/1.1" 200 -
+2025-01-28 16:06:17,821 - 127.0.0.1 - - [28/Jan/2025 16:06:17] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -

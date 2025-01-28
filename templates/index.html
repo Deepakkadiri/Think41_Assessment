@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Lookup</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Patient Lookup</h2>
+        <input type="text" id="patientId" placeholder="Enter Patient ID">
+        <button onclick="fetchPatient()">Search</button>
+        <p id="errorMessage" class="error"></p>
+        <div id="patientInfo" class="patient-info" style="display: none;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
